@@ -2,6 +2,8 @@
 
 docker image to run a monero full network node
 
+# April 28, 2023: Update to monero 0.18.3.3
+
 # October 2018: Breaking Change
 **warning**  
 for improved security the new images will run the monero daemon under it's own user and not as root anymore!
@@ -25,7 +27,7 @@ Manual Way
 ```
 docker stop monerod
 docker rm monerod
-docker pull kannix/monero-full-node
+docker pull jasonrucco/monero-full-node
 ```
 Then launch using the "how to use" command above
 
