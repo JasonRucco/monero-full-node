@@ -2,7 +2,7 @@
 
 docker image to run a monero full network node
 
-# December 10, 2024: Update to monero 0.18.3.4;  Update Ubuntu to 20.04
+# December 10, 2024: Update to monero 0.18.3.4;  Update Ubuntu to 20.04; Add action for CI to docker hub
 # April 28, 2023: Update to monero 0.18.3.3
 
 # October 2018: Breaking Change
