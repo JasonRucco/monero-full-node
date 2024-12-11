@@ -1,5 +1,5 @@
 # Usage: docker run --restart=always -v /var/data/blockchain-xmr:/root/.bitmonero -p 18080:18080 -p 18081:18081 --name=monerod -td jasonrucco/monero-full-node
-FROM ubuntu:18.04 AS build
+FROM ubuntu:20.04 AS build
 
 ENV MONERO_VERSION=0.18.3.4 MONERO_SHA256=51ba03928d189c1c11b5379cab17dd9ae8d2230056dc05c872d0f8dba4a87f1d
 
@@ -15,7 +15,7 @@ RUN curl https://dlsrc.getmonero.org/cli/monero-linux-x64-v$MONERO_VERSION.tar.b
   cp ./monero-x86_64-linux-gnu-v$MONERO_VERSION/monerod . &&\
   rm -r monero-*
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN useradd -ms /bin/bash monero && mkdir -p /home/monero/.bitmonero && chown -R monero:monero /home/monero/.bitmonero
 USER monero
